@@ -50,8 +50,7 @@ def main():
                 sys.exit("Game over!")
             for shot in shots:
                 if shot.collides_with(asteroid):
-                    asteroid.kill()
-                    shot.kill()
+                    asteroid.split()
         
         # Pause the loop until 1/60th of a second has passed
         dt = clock.tick(60) / 1000
